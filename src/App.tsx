@@ -1,8 +1,16 @@
+import AddToDo from './components/AddToDo';
+import Header from './components/Header';
+import ToDoList from './components/ToDoList';
+import { TodoProvider } from './contexts/TodoContext';
+
 export default function App() {
 	return (
-		<>
-			<h1 className='text-center text-3xl'>Hello world!</h1>
-			<button className='btn btn-error'>Button</button>
-		</>
+		<TodoProvider>
+			<div className='container mx-auto mt-5'>
+				<Header />
+				<AddToDo />
+				<ToDoList />
+			</div>
+		</TodoProvider>
 	);
 }

@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Roulettech App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+The frontend for the Roulettech Todo List App.
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Designed to consume the API of the corresponding Django backend.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-   [Vite](https://vitejs.dev/)
+-   [React](https://react.dev/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [SWC](https://swc.rs/)
+-   [TailwindCSS](https://tailwindcss.com/)
+-   [DaisyUI](https://daisyui.com/)
+-   [Axios](https://axios-http.com/)
 
--   Configure the top-level `parserOptions` property like this:
+## Usage
 
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ['./tsconfig.node.json', './tsconfig.app.json'],
-			tsconfigRootDir: import.meta.dirname
-		}
-	}
-});
-```
-
--   Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
--   Optionally add `...tseslint.configs.stylisticTypeChecked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
-
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: '18.3' } },
-	plugins: {
-		// Add the react plugin
-		react
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs['jsx-runtime'].rules
-	}
-});
-```
+1. Install correct Node version: `nvm install && nvm use`
+2. Install dependencies: `npm i`
+3. Ensure Django backend is running on `127.0.0.1:8000`
+4. Run the app: `npm run dev`
